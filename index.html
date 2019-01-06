@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chelsea Borg</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,700,700i|Chivo:300" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="box">
+    	
+        <header id="header">
+        <div class="banner">
+            	<div class="name"><div class="dotz">
+                	<p id="topdot">.</p>
+                    <p id="middot">.</p>
+                    <p id="botdot">.</p>
+                </div>
+            	<div id="nombre" >Chelsea <br />Borg.</div></div>
+            </div>
+            <div class="turnoff" id="about">
+            	<div id="yolo">Chelsea Borg is a student at Massachusetts College of Art and Design, anticipating the completion of her BFA in Graphic Design in 2019. Native to the city of Boston, she embraced a deep love of web design at a young age. After attending an HTML summer camp in the fifth grade, she was drawn to the intricate problem solving of coding, and spent the next decade tinkering with her HTML and CSS skills. By her third year at MassArt, Chelsea had begun the painstaking process of teaching herself Javascript, and practiced writing out her own functions with the frequent assistance of StackOverflow. This entire portfolio site, along with all of its JS functions, was lovingly handcoded by Chelsea.
+                <br /><br />When not coding, Chelsea works as a hand-painted sign artist, and hones her craft in digital design, branding, advertising, and packaging design with unbridled enthusiasm.</div> 
+            </div>
+            
+            <div class="turnoff" id="contact">
+            	<button type="button" class="contactbutt" id="contmail" onClick="addsubj()"><i class="far fa-envelope-open"></i><h4>Email</h4></button><button type="button" class="contactbutt" id="conttel" onClick="addnumb()"><i class="fa fa-phone" aria-hidden="true"></i><h4>Phone</h4></button><a href="https://www.instagram.com/bchelseab/" target="_blank"><button type="button" class="contactbutt" id="contsta"><i class="fab fa-instagram"></i><h4>Instagram</h4></button></a>
+</div>
+            <nav id="nav">
+            	<button type="button" class="navbutt" id="navabout" onClick="switchup(about,contact)"><i class="far fa-user"></i><br><span class="navcap">About</span></button>
+                <button type="button" class="navbutt" id="navcontact" onClick="switchup(contact,about)"><i class="far fa-paper-plane"></i><br><span class="navcap">Contact</span></button>
+                <button type="button" class="navbutt" id="navresume"onClick="switchout()"><i class="far fa-file-alt"></i><br><span class="navcap">Resume</span></button>
+            </nav>
+            <div id="filters">
+                <label class="option">
+                    <input type="radio" checked="checked" name="radio" onClick="kids.forEach(revive)">
+                    <span class="checkmark" id="filter1">All</span>
+                </label>
+  				
+                <label class="option">
+                    <input type="radio" name="radio">
+                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumba')">Design</span>
+                </label>
+                
+                <label class="option">
+                    <input type="radio" name="radio">
+                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbb')">Illustration</span>
+                </label>
+                
+                <label class="option">
+                    <input type="radio" name="radio">
+                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbc')">Web</span>
+                </label>
+                
+                <label class="option">
+                    <input type="radio" name="radio">
+                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbd')">Advertising</span>
+                </label>
+                
+                <label class="option">
+                    <input type="radio" name="radio">
+                    <span class="checkmark" id="filter3" onClick="kids.forEach(tryit, 'thumbe')">Photography</span>
+                </label>
+            </div>
+        </header>
+        
+        <div class="gallery">
+        	
+        	
+            	  <div id="dieciocho" class="thumba" onClick="kids.forEach(dive, 'dieciocho')"><div class="thumbcap"><h1>Frank Ocean Box Set</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 19.png" /></div>
+                <div id="veinte" class="thumbc" onClick="kids.forEach(dive, 'veinte')"><div class="thumbcap"><h1>Loop App</h1><h2>2018</h2><h3>WEB</h3></div><img class="nail" src="Layer 21.png" /></div>
+                <div id="veintitres" class="thumba" onClick="kids.forEach(dive, 'veintitres')"><div class="thumbcap"><h1>Hand Lettered Signs</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 24.png" /></div>
+                <div id="veinticuatro" class="thumba" onClick="kids.forEach(dive, 'veinticuatro')"><div class="thumbcap"><h1>The Hooded Crow</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 25.png" /></div>
+                <div id="diecisiete" class="thumba" onClick="kids.forEach(dive, 'diecisiete')"><div class="thumbcap"><h1>Acton Rebrand</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 18.png" /></div>
+                <div id="veintiuno" class="thumbc" onClick="kids.forEach(dive, 'veintiuno')"><div class="thumbcap"><h1>Glean</h1><h2>2018</h2><h3>WEB</h3></div><img class="nail" src="Layer 22.png" /></div>
+                <div id="veintidos" class="thumba" onClick="kids.forEach(dive, 'veintidos')"><div class="thumbcap"><h1>Electric Baby Magazine</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 23.png" /></div>
+                <div id="diecinueve" class="thumbc" onClick="kids.forEach(dive, 'diecinueve')"><div class="thumbcap"><h1>Yellowstone App</h1><h2>2018</h2><h3>WEB</h3></div><img class="nail" src="Layer 20.png" /></div>
+                <div id="once" class="thumba" onClick="kids.forEach(dive, 'once')"><div class="thumbcap"><h1>The Daily Catch Rebrand</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 12.png" /></div>
+                <div id="diez" class="thumba" onClick="kids.forEach(dive, 'diez')"><div class="thumbcap"><h1>Design is a Job</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 10.png" /></div>
+                <div id="trece" class="thumbd" onClick="kids.forEach(dive, 'trece')"><div class="thumbcap"><h1>Ticonderoga Campaign</h1><h2>2017</h2><h3>ADVERTISING</h3></div><img class="nail" src="Layer 14.png" /></div>
+                <div id="uno" class="thumba" onClick="kids.forEach(dive, 'uno')"><div class="thumbcap"><h1>When Life Gives You Lemons</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 1.png" /></div>
+                <div id="nueve" class="thumbc" onClick="kids.forEach(dive, 'nueve')"><div class="thumbcap"><h1>DaVinci Redesign</h1><h2>2017</h2><h3>WEB</h3></div><img class="nail" src="Layer 9.png" /></div>
+                <div id="quince" class="thumbb" onClick="kids.forEach(dive, 'quince')"><div class="thumbcap"><h1>Self Control</h1><h2>2017</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 16.png" /></div>
+                <div id="seis" class="thumbc" onClick="kids.forEach(dive, 'seis')"><div class="thumbcap"><h1>Instafame Simulator</h1><h2>2017</h2><h3>WEB</h3></div><img class="nail" src="Layer 7.png" /></div>
+                <div id="catorce" class="thumbd" onClick="kids.forEach(dive, 'catorce')"><div class="thumbcap"><h1>BARCC Campaign</h1><h2>2017</h2><h3>ADVERTISING</h3></div><img class="nail" src="Layer 15.png" /></div>
+                <div id="ocho" class="thumba" onClick="kids.forEach(dive, 'ocho')"><div class="thumbcap"><h1>Hood Rebrand</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 11.png" /></div>
+                <div id="cinco" class="thumbe" onClick="kids.forEach(dive, 'cinco')"><div class="thumbcap"><h1>Monochrome</h1><h2>2016</h2><h3>PHOTOGRAPHY</h3></div><img class="nail" src="Layer 8.png" /></div>
+                <div id="tres" class="thumbb" onClick="kids.forEach(dive, 'tres')"><div class="thumbcap"><h1>Daily Sketches</h1><h2>2016</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 4.png" /></div>
+                <div id="cuatro" class="thumbe" onClick="kids.forEach(dive, 'cuatro')"><div class="thumbcap"><h1>Digital Photography</h1><h2>2016</h2><h3>PHOTOGRAPHY</h3></div><img class="nail" src="Layer 3.png" /></div>
+              <div id="doce" class="thumbb" onClick="kids.forEach(dive, 'doce')"><div class="thumbcap"><h1>Inconvenience Animation</h1><h2>2016</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 13.png" /></div>
+                <div id="siete" class="thumba" onClick="kids.forEach(dive, 'siete')"><div class="thumbcap"><h1>UIUC Design Competition</h1><h2>2016</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 6.png" /></div>
+                <div id="dos" class="thumbb" onClick="kids.forEach(dive, 'dos')"><div class="thumbcap"><h1>Dinner</h1><h2>2014</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 2.png" /></div>
+                <div id="dieciseis" class="thumbb" onClick="kids.forEach(dive, 'dieciseis')"><div class="thumbcap"><h1>Chairs</h1><h2>2013</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 17.png" /></div>
+                
+        	
+        </div>
+    <button type="button" class="navbutt" id="upbutt" onClick="goup()"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
