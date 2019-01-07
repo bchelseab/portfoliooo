@@ -995,6 +995,18 @@ button:focus {outline:0;}
   height:60vw;
 }
 
+	.grid5 {
+	-webkit-column-count: 2;
+  -webkit-column-gap:   1vw;
+  -moz-column-count:    2;
+  -moz-column-gap:      1vw;
+	column-count:2;
+  column-gap:1vw;
+  line-height:0;
+  margin-top:2vw;
+  height:30vw;
+}
+
 .pinky {
 	width:100%;
 	height:auto;
