@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Doomed Internet - Play</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	
+	<div class="box">
+	
+		
+		<div class="window" id="thawindow">
+			<div class="visible" id="loadscrn">
+			
+				<img id="logo" src="logodark.png">
+				<div id="logosub">A game about our fragile future</div>
+				<div id="essentialq">If there is to be any record left behind of who we were as a people, it relies on the continued existence of the internet. But has our blind faith in technology doomed us to be a blank space in history?</div>
+				<form name="profiler" id="profiler" autocomplete="off">
+               <h4>Enter your name:</h4> <input type="text" name="handle">
+               <br />
+               
+               <input type="button" class="playbutt" value="Start Game" onClick="beginplay()">
+           	</form>
+			
+			</div>
+			
+			<div class="hidden" id="game">
+				
+					<div id="stagecount" class="hidden"><ul> <li value="1" id="stage">stage</li></ul></div>
+				<form class="hidden"><input type="button" id="remember" value="0"><input type="button" id="remember1" value="memory"> <input type="button" id="remember2" value="vessel"><input type="button" id="remember3" value="vote"><input type="button" id="remember4" value="store"><input type="button" id="remember5" value="fate"></form>
+				
+					<div id="thestory">The year is 2019, and you are living in the golden age of technology, <div id="handlehere"></div>. The World Wide Web just turned 30, and the planet is more connected than ever before.</div>
+					
+					<div id="popup" class="popwindow">
+				
+						<div id="popupdesc" class="popdesc">How do you feel?</div>
+						
+						<form id="popupbutts">
+						
+							<input type="button" class="choice" value="Panicked" onClick="decide('bgcompsit', stpanic, desc1, choices1)">
+							
+							<input type="button" class="choice" value="Psyched" onClick="decide('bgcompsit', stpsych, desc1, choices1)">
+							
+						</form>
+						<form><input type="button" class="hidden" id="help" value="?" onClick="hiddenmenu()">
+						</form>
+						
+						
+<!--
+<div id="truth"></div>
+						<form><input type="button" id="lies" value="lmao" onClick="goforit('remember2')"></form>
+-->
+				
+					</div>
+				
+						<div id="helpwindow" class="hidden">
+				
+							<div id="helpdesc" class="popdesc">Options Cont.</div>
+						
+						<form id="helpbutts">
+						
+							<input type="button" class="choice" value="Engrave onto a granite tablet" onClick="decide('bgtablet', sttablet, desc4, choices4, 'tablet')">
+							
+						</form></div>
+				<img id="logo2" src="logolight.png">
+			</div>
+			
+		
+		</div>
+	
+	</div>
+	
+<script type="text/javascript">
+    	
+		var loadscrnDiv = document.getElementById('loadscrn');
+	var rmb1 = document.getElementById('remember1');
+
+		var rmb2 = document.getElementById('remember2');
+	
+		var gameDiv = document.getElementById('game');
+		var counter = 1;
+		var prefixx = 0;
+		var help = document.getElementById('help');
+	var helpwindow = document.getElementById('helpwindow');
+		var thawindow = document.getElementById('thawindow');
+	var thestory = document.getElementById('thestory');
+	var popupdesc = document.getElementById('popupdesc');
+	var popupbutts = document.getElementById('popupbutts');
+	var stage = document.getElementById('stage');
+	var remember = document.getElementById('remember');
+	var stpanic = "Isn't all this advancement scary? It feels like the people around you are looking up from their phones less and less. They aren't thinking about the important things. But you have more than the present in mind. One day, a new population will have to recover from the damage caused by the smartphone era. How will they avoid making the same mistakes, unless they understand what life in the 21st century was really like? You would like a record of your existence to be preserved for future generations.";
+	var stpsych = "Computers are awesome. You just love them. Look at that smile on your face! Technology is just going to keep getting better and better, and it's hard not to look forward to the future. What will the planet look like after you're gone? Maybe it's time to start thinking of how you'll be remembered thousands of years from now.";
+	var desc1 = "What would you like the civilization of the future to know about you?";
+	var choices1 = '<input type="button" class="choice" value="My family history" onClick="decide(' + "\'" + 'bgfamhist' + "\'" + ', stfamhist, desc2, choices2, ' + "\'" + 'history' + "\'" + ')"><input type="button" class="choice" value="My financial status" onClick="decide(' + "\'" + 'bgmoney' + "\'" + ', stmoney, desc2, choices2, ' + "\'" + 'money' + "\'" + ')"><input type="button" class="choice" value="Images of myself and my life" onClick="decide(' + "\'" + 'bgphotos' + "\'" + ', stphotos, desc2, choices2, ' + "\'" + 'images' + "\'" + ')"><input type="button" class="choice" value="My life' + "\'" + 's work" onClick="decide(' + "\'" + 'bgtrophy' + "\'" + ', sttrophy, desc2, choices2, ' + "\'" + 'work' + "\'" + ')">';
+	var stfamhist = "Nothing is more important to you than the story of how your family came to be. You spent history classes learning about the lives of ancient people, who left their record in handwritten letters, or carved into stone tombs, or depicted in elaborate paintings. In a couple thousand years, people will spend history class learning about YOU.";
+	var stmoney = "Nothing is more important for societies of the future to understand than the economic stories of 21st century individuals. Your money tells the story of your hardwork and hardships. You spent history classes learning about the transactions and finances of ancient people, who left their record in handwritten ledgers, or carved into stone tablets, or depicted in elaborate paintings. In a couple thousand years, people will spend history class learning about YOU.";
+	var stphotos = "Nothing is more important for societies of the future to see than accurate depictions of everyday life in the 21st century. You spent history classes learning about the lives of ancient people, who left their record in hand-drawn sketches, or carved into stone tombs, or depicted in elaborate paintings. In a couple thousand years, people will spend history class looking at images of YOU.";
+	var sttrophy = "Nothing is more important for societies of the future to see than the accomplishments that have defined your 21st century existence. You spent history classes learning about the work of ancient people, who left their record in hand-written ledgers, or carved into stone tombs, or depicted in elaborate paintings. In a couple thousand years, people will spend history class learning what YOU made.";
+	var sttablet = "Engrave onto a granite tablet";
+	var desc2 = "Where does this information about you currently live?";
+	var choices2 = '<input type="button" class="choice" value="On my computer or phone" onClick="decide(' + "\'" + 'bgdesktop' + "\'" + ', stdesktop, desc3, choices3, ' + "\'" + 'computer' + "\'" + ')"><input type="button" class="choice" value="On the web" onClick="decide(' + "\'" + 'bginternet' + "\'" + ', stinternet, desc3, choices3, ' + "\'" + 'web' + "\'" + ')"><input type="button" class="choice" value="In the cloud" onClick="decide(' + "\'" + 'bgcloud' + "\'" + ', stcloud, desc3, choices3, ' + "\'" + 'cloud' + "\'" + ')"><input type="button" class="choice" value="On a flash drive" onClick="decide(' + "\'" + 'bgflash' + "\'" + ', stflash, desc3, choices3, ' + "\'" + 'flash' + "\'" + ')"><input type="button" class="choice" value="On paper" onClick="decide(' + "\'" + 'bgpaper' + "\'" + ', stpaper, desc3, choices3, ' + "\'" + 'paper' + "\'" + ')">';
+	var stdesktop = "On your computer.";
+	var stinternet = "On the web.";
+	var stcloud = "In the cloud.";
+	var stflash = "On a flash drive.";
+	var stpaper = "On paper.";
+	var stcd = "On a CD-ROM";
+	var desc3 = "In the interest of preservation, would you like to continue with this method of storage, or store your information somewhere else?";
+	var choices3 = '<input type="button" class="choice" value="Keep" onClick="decide(undefined, undefined, desc4, choices4)"><input type="button" class="choice" value="Change" onClick="reverse()">';
+	var desc4 = "Time passes, and you grow older.";
+	var choices4 = '<input type="button" class="choice" value="You have no choice" onClick="decide(' + "\'" + 'bgpolls' + "\'" + ', stpolls, desc5, choices5)">';
+	var stpolls = "It's another big election year. You arrive at your polling place, ready to make your big decision. You always vote based on issues, so you know you're going to select the candidate who will support the cause you believe to be most crucial.";
+	var desc5 = "Which candidate (and platform) will get your vote for the President of the United States?";
+	var choices5 =  '<input type="button" class="choice" value="Joe Kennedy the 8th: economic reform" onClick="decide(' + "\'" + 'bgvictory' + "\'" + ', undefined, desc6, choices6, ' + "\'" + 'economy' + "\'" + ')"><input type="button" class="choice" value="Miranda Cosgrove: climate change" onClick="decide(' + "\'" + 'bgvictory' + "\'" + ', undefined, desc6, choices6, ' + "\'" + 'climate' + "\'" + ')"><input type="button" class="choice" value="Willow Smith: world peace" onClick="decide(' + "\'" + 'bgvictory' + "\'" + ', undefined, desc6, choices6, ' + "\'" + 'peace' + "\'" + ')">';
+	var rmb3 = document.getElementById('remember3');
+	var rmb4 = document.getElementById('remember4');
+	var desc6 = "You're approaching old age.";
+	var choices6 = '<input type="button" class="choice" value="You are powerless to slow the passage of time" onClick="decide(' + "\'" + 'bgbed' + "\'" + ', stbed, desc7)">';
+	var stbed = "You are at the very end of your life, with your loved ones visiting to give their last goodbyes. Hopefully, you've left behind a positive impact on the world.";
+	var desc7 = "Now faced by your own mortality, you must consider the status of your legacy.";
+	var stlocker = "Your time on earth has ended. Luckily, the most important information about you is safe inside a storage locker.";
+	var stsilo = "Your time on earth has ended. Luckily, the most important information about you is safe inside a giant grain silo in the middle of the country.";
+	var stbunker = "Your time on earth has ended. Luckily, the most important information about you is safe inside an underground bunker.";
+	var stfloor = "Your time on earth has ended. Luckily, the most important information about you is safe underneath the floorboards of your home.";
+	var desc8 = "Is your data finally safe and well preserved?";
+	var choices8 = '<input type="button" class="choice" value="I think so" onClick="decide(undefined, undefined, desc10, choices10)"><input type="button" class="choice" value="Maybe not" onClick="decide(undefined, undefined, desc10, choices10)">';
+	var stkale = "Your time on earth has ended. Kale greatly mourns your passing, and forever honors your memory with consistant online storage payments.";
+	var stpetunia = "Your time on earth has ended. Petunia greatly mourns your passing, and forever honors your memory with consistant online storage payments.";
+	var stelliswar = "Your time on earth has ended. Ellis honors your memory by paying for your online storage for several years. But President Kennedy made a few too many enemies abroad. World War III breaks out, and Ellis is drafted. Busy fighting overseas, he misses a payment for your storage space.";
+	var stelliswarming = "Your time on earth has ended. Ellis honors your memory by paying for your online storage for several years. But with little done to cease the speed of climate change, the planet takes a turn for the worse. Globally, there's an increase in extreme weather and natural disasters. A freak Nor'easter sends a tree through the roof of the attourney's office, sending Ellis (and his payments for your storage space) to a premature end.";
+	var stelliscollapse = "Your time on earth has ended. Ellis honors your memory by paying for your online storage for several years. But President Cosgrove could do little to stave off the economic disaster that had been threatening America for the last decade. A total market collapse throws the country into chaos, and nearly 70% of Americans find themselves unemployed, including Ellis. With no income, he can no longer make payments for your online storage.";
+	var desc9 = "Is your data finally safe and well preserved?";
+	var choices9 = '<input type="button" class="choice" value="I think so" onClick="decide(undefined, undefined, desc10, choices10)"><input type="button" class="choice" value="Maybe not" onClick="decide(undefined, undefined, desc10, choices10)">';
+	var desc10 = "Your record has been erased. History will never know of your greatness.";
+	var choices10 = '<input type="button" class="choice" value="Feels bad, man" onClick="decide(' + "\'" + 'bgfailure' + "\'" + ', stfailure, descfail, restart)">';
+	
+	var stfailure = "You were defeated.";
+	var descfail = "Failure";
+	var restart = '<input type="button" class="choice" value="Play Again" onClick="location.href=location.href">';
+	function getvalue(origin) {
+		 return document.getElementById(origin).value;
+	};
+	
+	
+	
+	var truth = document.getElementById('truth');
+	var lies = document.getElementById('lies');
+	
+	function beginplay() {
+			loadscrnDiv.style.transition = 'all ease 0.7s';
+				loadscrnDiv.style.opacity = 0;
+				setTimeout(gogo, 700);};
+				
+				function gogo() {
+                loadscrnDiv.setAttribute('class', 'hidden');
+                gameDiv.setAttribute('class', 'visible');
+				document.getElementById("handlehere").innerHTML = document.profiler.handle.value;
+					thawindow.style.backgroundImage = 'url("bgcomproom.jpg")';
+            };
+	
+	function makechoice() {
+		 counter++;
+		stage.value = counter;
+	};
+	
+	
+	
+	function decide(backgrnd, story, description, butts, memory) {
+		
+		var stwar = "President Kennedy made a few too many enemies abroad. World War III breaks out, and attacks from both sides show no signs of stopping. An enemy aircraft firebombs the data center where the " + getvalue("remember2") + " company has been storing your data for all these years. As magical and invisible as the " + getvalue("remember2") + " seems, it's housed within physical objects that are just as susceptible to brute force as anything else. The internet isn't a ball of ephemeral gas floating in the sky, it's warehouses full of blinking computers, just like the one that has now been bombed out of existance.";
+	var stwarming = "With little done to cease the speed of climate change, the planet takes a turn for the worse. Globally, there's an increase in extreme weather and natural disasters. During a months-long heatwave, the data center where the " + getvalue("remember2") + " company has been storing your data for all these years loses power. The loss of connection to the internet may be temporary, but these servers require precise environmental controls. In the sweltering heat and humidity, many of the machines are damaged. The internet isn't a ball of ephemeral gas floating in the sky, it's warehouses full of blinking computers, just like the one that has now been brought to its knees by the forces of nature.";
+	var stcollapse = "President Cosgrove could do little to stave off the economic disaster that had been threatening America for the last decade. A total market collapse throws the country into chaos, and nearly 70% of Americans find themselves unemployed. The " + getvalue("remember2") + " company that has been storing your data for all these years goes out of business. No longer is anyone paying the bill to keep the servers online, the temperature just right, or the rooms full of servers secure. The data center falls into disrepair and is later bulldozed for farmland.";
+		if (backgrnd != undefined){
+		thawindow.style.backgroundImage = 'url(' + backgrnd + '.jpg)';}
+		if (story != undefined){
+		thestory.innerHTML = story;}
+		if (description != undefined){
+		popupdesc.innerHTML = description;}
+		if (butts != undefined){
+			popupbutts.innerHTML = butts;
+		}
+		makechoice();
+		if (memory != undefined){
+		prefixx++;
+		remember.value = prefixx;
+		var newname = 'remember' + prefixx;
+		var z = document.getElementById(newname);
+		z.value = memory;
+			if (prefixx == 3){
+				if (memory == 'economy') {
+			thestory.innerHTML = "Victory! Joe Kennedy the 8th is now POTUS. Time to grab your bike and join the celabratory parade.";
+		}
+		else if (memory == 'climate') {
+			thestory.innerHTML = "Victory! Miranda Cosgrove is now POTUS. Time to grab your bike and join the celabratory parade.";
+		}
+		else if (memory == 'peace') {
+			thestory.innerHTML = "Victory! Willow Smith is now POTUS. Time to grab your bike and join the celabratory parade.";
+		}
+			}
+		}
+		if (counter == 5){
+			help.setAttribute('class', 'hidden');
+			helpwindow.setAttribute('class', 'hidden');
+		}
+		if (counter == 8) {
+			var method = rmb2.value;
+			var personal = rmb1.value;
+			var para = document.createElement("P");
+			if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash' || method == 'tablet') {			
+  para.innerHTML = "Where will you request your family to have the " + method + "-based record of your " + personal + " stored once you are no longer living?";
+  popupdesc.appendChild(para);
+				popupbutts.innerHTML = '<input type="button" class="choice" value="In a storage locker" onClick="decide(' + "\'" + 'bglocker' + "\'" + ', stlocker, desc8, choices8, ' + "\'" + 'locker' + "\'" + ')"><input type="button" class="choice" value="In a grain silo" onClick="decide(' + "\'" + 'bgsilo' + "\'" + ', stsilo, desc8, choices8, ' + "\'" + 'silo' + "\'" + ')"><input type="button" class="choice" value="In an underground bunker" onClick="decide(' + "\'" + 'bgbunker' + "\'" + ', stbunker, desc8, choices8, ' + "\'" + 'bunker' + "\'" + ')"><input type="button" class="choice" value="Under your floorboards" onClick="decide(' + "\'" + 'bgfloor' + "\'" + ', stfloor, desc8, choices8, ' + "\'" + 'floor' + "\'" + ')">';
+			}
+			else {
+				para.innerHTML = "Who will you choose to continue paying the annual fee to the " + method + " service so that the record of your " + personal + " remains safe once you are no longer living?";
+				popupdesc.appendChild(para);
+				popupbutts.innerHTML = '<input type="button" class="choice" value="Kale, your architect son" onClick="decide(' + "\'" + 'bgkale' + "\'" + ', stkale, desc9, choices9, ' + "\'" + 'Kale' + "\'" + ')"><input type="button" class="choice" value="Ellis, your attourney" onClick="decide(undefined, undefined, undefined, undefined, ' + "\'" + 'Ellis' + "\'" + ')"><input type="button" class="choice" value="Petunia, your dearest friend" onClick="decide(' + "\'" + 'bgpetunia' + "\'" + ', stpetunia, desc9, choices9, ' + "\'" + 'Petunia' + "\'" + ')">';
+			}
+		}
+		if (counter == 9) {
+			var issue = rmb3.value;
+			var method = rmb2.value;
+			var keeper = rmb4.value;
+			if (keeper == 'Ellis') {
+				if (issue == 'economy') {
+					decide('bgwar', stelliswar, desc10, choices10, 'war');
+				}
+				else if (issue == 'climate') {
+					decide('bgcollapse', stelliscollapse, desc10, choices10, 'economic collapse');
+				}
+				else {
+					decide('bgwarming', stelliswarming, desc10, choices10, 'warming');
+				}
+			}
+		}
+		if (counter == 10) {
+			var issue = rmb3.value;
+			var method = rmb2.value;
+			var keeper = rmb4.value;
+			var personal = rmb1.value;
+			var stlockerwar = "President Kennedy made a few too many enemies abroad. World War III breaks out, and attacks from both sides show no signs of stopping. An enemy missile levels the " + keeper + " where your records were kept. Everything inside the " + keeper + " is destroyed.";
+			var desctabletwar = "Even a missile strike cannot un-engrave granite! Future societies will marvel at your story.";
+			var choices11 = '<input type="button" class="choice" value="Oh, cool." onClick="decide(' + "\'" + 'bgsuccess' + "\'" + ', stsuccess, descsuccess, restart)">';
+			var stlockercollapse = "President Cosgrove could do little to stave off the economic disaster that had been threatening America for the last decade. A total market collapse throws the country into chaos, and nearly 70% of Americans find themselves unemployed. The self-storage company that has been preserving your records for all these years goes bankrupt. With no one willing to buy out the business, the company bulldozes the storage locker and its now worthless contents, to be converted into farmland.";
+			var desctabletcollapse = "Even a bulldozer cannot un-engrave granite! Future societies will marvel at your story.";
+			var stlockerwarming = "With little done to cease the speed of climate change, the planet takes a turn for the worse. Globally, there's an increase in extreme weather and natural disasters. Much of life on Earth faces extinction.";
+			var desclockerwarming = "It takes more than a little bad weather to knock down the fortress that is a self-storage facility.";
+			var stfuturecd = "The " + method + " detailing your " + personal + " may have lasted the centuries in perfect physical condition. But it didn't take long for " + method + " drives to disappear off the face of the earth. The archaic piece of technology is so inaccesible to the people of the future, that they will never be able to uncover the data stored within.";
+			var choices12 = '<input type="button" class="choice" value="Oh, cool." onClick="decide(' + "\'" + 'bgfuturetech' + "\'" + ', stfuturecd, desc10, choices10)">';
+			
+			var stsuccess = "Your legacy will live on, your existence becoming known to the world long after your passing.";
+			var descsuccess = "Winner!";
+		if (keeper == 'Kale' || keeper == 'Petunia') {
+					if (issue == 'economy') {
+						decide('bgwar', stwar, undefined, undefined, 'war');
+					}
+					else if (issue == 'climate') {
+						decide('bgcollapse', stcollapse, undefined, undefined, 'economic collapse');
+					}
+					else {
+						decide('bgwarming', stwarming, undefined, undefined, 'warming');
+					}
+				}
+		else if (keeper == 'locker') {
+			if (issue == 'economy') {
+				if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash') {
+					decide('bgwar', stlockerwar, undefined, undefined, 'war');
+				}
+				else {
+					decide('bgwar', stlockerwar, desctabletwar, choices11, 'war');
+				}
+			}
+			if (issue == 'climate') {
+				if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash') {
+					decide('bgcollapse', stlockercollapse, undefined, undefined, 'economic collapse');
+				}
+				else {
+					decide('bgcollapse', stlockercollapse, desctabletcollapse, choices11, 'economic collapse');
+				}
+			}
+			if (issue == 'peace') {
+				if (method == 'cd' || method == 'flash' || method == 'computer') {
+					decide('bgwarming', stlockerwarming, desclockerwarming, choices12, 'global warming');}
+				else {
+					decide('bgwarming', stlockerwarming, desclockerwarming, choices11, 'global warming');}
+			}
+		}
+		else if (keeper =='silo') {
+			if (issue == 'economy') {
+				if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash') {
+					decide('bgwar', stlockerwar, undefined, undefined, 'war');
+				}
+				else {
+					decide('bgwar', stlockerwar, desctabletwar, choices11, 'war');
+				}
+			}
+			if (issue == 'climate') {
+				if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash') {
+					decide('bgcollapse', stlockercollapse, undefined, undefined, 'economic collapse');
+				}
+				else {
+					decide('bgcollapse', stlockertabletcollapse, undefined, undefined, 'economic collapse');
+				}
+			}
+			if (issue == 'peace') {
+				if (method == 'cd' || method == 'paper' || method == 'computer' || method == 'flash') {
+					decide('bgwarming', stlockerwarming, undefined, undefined, 'global warming');
+				}
+				else {
+					decide('bgwarming', stlockertabletwarming, undefined, undefined, 'global warming');
+				}
+			}
+		}
+		}
+		};
+	
+	
+	function reverse() {	
+			var personal = rmb1.value;
+	var method = rmb2.value;
+		if (personal == 'history') {
+			thawindow.style.backgroundImage = 'url("bgfamhist.jpg")';
+		}
+		else if (personal == 'money') {
+			thawindow.style.backgroundImage = 'url("bgmoney.jpg")';
+		}
+		else if (personal == 'images') {
+			thawindow.style.backgroundImage = 'url("bgphotos.jpg")';
+		}
+		else if (personal == 'work') {
+			thawindow.style.backgroundImage = 'url("bgtrophy.jpg")';
+		}
+		if (method == 'computer') {
+			var mapObj = {
+			   "On my computer or phone":"On a CD-ROM",
+			   desktop:"cd",
+				computer:"cd",
+			};
+			choices2 = choices2.replace(/On my computer or phone|desktop|computer/g, function(matched){
+			  return mapObj[matched];
+			});
+		}
+		else if (method == 'web') {
+			var mapObj = {
+			   "On the web":"On a CD-ROM",
+			   internet:"cd",
+				web:"cd",
+			};
+			choices2 = choices2.replace(/On the web|internet|web/g, function(matched){
+			  return mapObj[matched];
+			});
+		}
+		else if (method == 'cloud') {
+			var mapObj = {
+			   "In the cloud":"On a CD-ROM",
+			   cloud:"cd",
+			};
+			choices2 = choices2.replace(/In the cloud|cloud/g, function(matched){
+			  return mapObj[matched];
+			});
+		}
+		else if (method == 'flash') {
+			var mapObj = {
+			   "On a flash drive":"On a CD-ROM",
+			   flash:"cd",
+			};
+			choices2 = choices2.replace(/On a flash drive|flash/g, function(matched){
+			  return mapObj[matched];
+			});
+		}
+		else if (method == 'paper') {
+			var mapObj = {
+			   "On paper":"On a CD-ROM",
+			   paper:"cd",
+			};
+			choices2 = choices2.replace(/On paper|paper/g, function(matched){
+			  return mapObj[matched];
+			});
+		}
+		thestory.innerHTML = 'You would like to move the location of your personal records';
+		popupdesc.innerHTML = 'Where do you want to store your information?';
+		prefixx--;
+		var newchoice = choices2.replace(/3/g, "4");
+		popupbutts.innerHTML = newchoice;
+		help.setAttribute('class', 'choice');
+	}
+	
+	function hiddenmenu() {
+		helpwindow.setAttribute('class', 'visible');
+	}
+	
+	
+	
+	</script>
+	
+	
+</body>
+</html>

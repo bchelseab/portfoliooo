@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Chelsea Borg- Yellowstone App</title>
+<title>Chelsea Borg- Cooking Beautifullee</title>
 <link href="../style.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,700,700i|Chivo:300" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
@@ -13,16 +13,13 @@
     	
         <header id="header">
         <div class="banner">
-            	<div class="name"><div class="dotz">
-                	<p id="topdot">.</p>
-                    <p id="middot">.</p>
-                    <p id="botdot">.</p>
+            	<div class="name">
+            	<div id="nombre" >Chelsea <br />Borg<span id="topdot">.</span><span id="middot">.</span><span id="botdot">.</span></div>
+                    
                 </div>
-            	<div id="nombre" >Chelsea <br />Borg.</div></div>
             </div>
             <div class="turnoff" id="about">
-            	<div id="yolo">Chelsea Borg is a student at Massachusetts College of Art and Design, anticipating the completion of her BFA in Graphic Design in 2019. Native to the city of Boston, she embraced a deep love of web design at a young age. After attending an HTML summer camp in the fifth grade, she was drawn to the intricate problem solving of coding, and spent the next decade tinkering with her HTML and CSS skills. By her third year at MassArt, Chelsea had begun the painstaking process of teaching herself Javascript, and practiced writing out her own functions with the frequent assistance of StackOverflow. This entire portfolio site, along with all of its JS functions, was lovingly handcoded by Chelsea.
-                <br /><br />When not coding, Chelsea works as a hand-painted sign artist, and hones her craft in digital design, branding, advertising, and packaging design with unbridled enthusiasm.</div> 
+            	<div id="yolo">Chelsea Borg is a web designer, Boston native, and graduate of Massachusetts College of Art and Design. Though trained in graphic design, she has an equal curiosity for front-end development and makes a hobby out of writing JavaScript functions. This experimentation has resulted in creations such as an Instagram simulator game, and a choose-your-own-adventure about the end of the world, real practical stuff. This entire portfolio site, along with all of its JS functions, was lovingly handcoded by Chelsea. <br /><br />Between design work and coding projects, Chelsea finds time to take ballet classes, cook extravagant meals for one, and hate the Yankees.</div> 
             </div>
             
             <div class="turnoff" id="contact">
@@ -31,7 +28,7 @@
             <nav id="nav">
             	<button type="button" class="navbutt" id="navabout" onClick="switchup(about,contact)"><i class="far fa-user"></i><br><span class="navcap">About</span></button>
                 <button type="button" class="navbutt" id="navcontact" onClick="switchup(contact,about)"><i class="far fa-paper-plane"></i><br><span class="navcap">Contact</span></button>
-                <button type="button" class="navbutt" id="navresume"onClick="switchout()"><i class="far fa-file-alt"></i><br><span class="navcap">Resume</span></button>
+                <button type="button" class="navbutt" id="navresume" onClick="switchout()"><i class="far fa-file-alt"></i><br><span class="navcap">Resume</span></button>
             </nav>
             <div id="filters" class="blank">
                 <label class="bar">
@@ -69,23 +66,22 @@
         <button type="button" class="navbutt" id="closebutt" onClick="window.location.href='../index.html'"><i class="fas fa-arrow-left"></i><br><span class="navcap">BACK</span></button>
         <div class="gallery">
         <div id="canvas">
-            <h1>Yellowstone App</h1>
+            <h1>Cooking Beautifullee</h1>
             <br />
             <table id="info">
             	<tr>
-            	<td id="ticker1"><h2>Year</h2><h3> 2018</h3></td>
-                <td><h2>Category</h2><h3> App Design, Prototyping</h3></td>
+            	<td id="ticker1"><h2>Year</h2><h3> 2020</h3></td>
+                <td><h2>Category</h2><h3> Branding, Web Design</h3></td>
                 <td><h2>Media</h2><h3> Digital</h3></td>
-                <td id="ticker2"><h2>Software</h2><h3> Illustrator, Principle</h3></td>
+                <td id="ticker2"><h2>Software</h2><h3> Illustrator, Wordpress</h3></td>
                 </tr>
             </table><div class="desc">
-            <p>Starting with the idea of creating an app for someone experiencing a place for the first time, a concept was developed for newcomers to Yellowstone National Park. A clickable prototype was built in Principle. Because of the park's potential for dangerous situations, and its complete lack of cell service, the app has to cater to some very specific needs. To accomodate a wide range of experience levels, the app would allow a user to select the widgets they'll need, before they enter the park, downloading them while still in range of cell service. That way, everything one would require while within the park is stored locally, without any space being wasted on parts of the app that the user might not need.</p>
+            <p> As the lead designer and developer for food and lifestyle influencer Melissa Lee’s rebrand, created logos, brand guidelines, print and digital collateral, art directed illustrations, and wrote CSS and PHP for a full website refresh. The site can be viewed at <a href="https://cookingbeautifullee.com/">cookingbeautifullee.com</a></p>
             </div>
-            <div class="pinky"><video controls>
-  <source src="yellowstone.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video></div>
             
+             <div class="grid">
+            <img class="pinky" src="CB_page1.png" onclick="openModal();currentSlide(1)" /><img class="pinky" src="CB_page2.png" onclick="openModal();currentSlide(2)" /><img class="pinky" src="CB_page3.png" onclick="openModal();currentSlide(3)" /><img class="pinky" src="CB_page4.png" onclick="openModal();currentSlide(4)" /><img class="pinky" src="CB_page5.png" onclick="openModal();currentSlide(5)" />
+            </div>
         
         </div>
         </div>
@@ -97,27 +93,27 @@
 
     <div class="mySlides">
       <div class="numbertext">1 / 5</div>
-      <img src="BorgLemon1.jpg" style="width:100%" oncontextmenu="return false;" >
+      <img src="CB_page1.png" style="width:100%" oncontextmenu="return false;" >
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 5</div>
-      <img src="BorgLemon2.jpg" style="width:100%" oncontextmenu="return false;" >
+      <img src="CB_page2.png" style="width:100%" oncontextmenu="return false;" >
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 5</div>
-      <img src="BorgLemon3.jpg" style="width:100%" oncontextmenu="return false;" >
+      <img src="CB_page3.png" style="width:100%" oncontextmenu="return false;" >
     </div>
 
     <div class="mySlides">
       <div class="numbertext">4 / 5</div>
-      <img src="BorgLemon4.jpg" style="width:100%" oncontextmenu="return false;" >
+      <img src="CB_page4.png" style="width:100%" oncontextmenu="return false;" >
     </div>
     
     <div class="mySlides">
       <div class="numbertext">5 / 5</div>
-      <img src="BorgLemon5.jpg" style="width:100%" oncontextmenu="return false;" >
+      <img src="CB_page5.png" style="width:100%" oncontextmenu="return false;" >
     </div>
 
     <!-- Next/previous controls -->

@@ -32,7 +32,7 @@ body {
 }
 
 #yolo::-webkit-scrollbar-thumb {
-    background: #fd4747; 
+    background: #ff5076; 
 	border-radius:25px;
 }
 
@@ -83,39 +83,43 @@ header {
 #nombre {
 	font-weight:700;
 	display:inline-block;
-	margin-left:-1vw;
+	margin-left:3vw;
 	transition:all ease 0.3s;
+	vertical-align: top;
 	}
 	
 .dotz {
-	display:inline-block;
+	display:inline;
 }
 
 #topdot{
 	font-size:15vw;
 	font-weight:700;
-	margin:0;
-	line-height:2vw;
-	color:#f5f05e;
+	margin:0px;
+	line-height:0px;
+	color:#27d3d5;
 	transition:all ease 0.3s;
+	display: inline;
 }
 
 #middot{
 	font-size:15vw;
 	font-weight:700;
-	margin:0;
-	line-height:2vw;
-	color:#ffbbbf;
+	margin:0px 0px 0px -2.1vw;
+	line-height:0px;
+	color:#b3ffc2;
 	transition:all ease 0.3s;
+	display: inline;
 }
 
 #botdot{
 	font-size:15vw;
 	font-weight:700;
-	margin:0;
-	line-height:2vw;
-	color:#fd4747;
+	margin:0px 0px 0px -2.1vw;
+	line-height:0px;
+	color:#ff5076;
 	transition:all ease 0.3s;
+	display: inline;
 }
 
 .turnoff {
@@ -127,7 +131,7 @@ header {
 }
 
 #about {
-	border:solid #fd4747 1px;
+	border:solid #ff5076 1px;
 	background-color:#ffebeb;
 	margin-top:-50vw;
 	vertical-align:top;
@@ -143,8 +147,8 @@ header {
 }
 
 #contact {
-	border:solid #f5f05e 1px;
-	background-color:#fffdc3;
+	border:solid #42C25C 1px;
+	background-color:#b3ffc2;
 	margin-top:-50vw;
 	vertical-align:top;
 	color:black;
@@ -188,7 +192,7 @@ header {
 }
 
 .contactbutt:hover {
-	color:#f5f05e;
+	color:#42C25C;
 }
 
 .contactbutt:hover h4 {
@@ -232,13 +236,13 @@ nav i {
 }
 
 #navabout {
-	background-color:#fd4747;
+	background-color:#ff5076;
 	transition:all ease 0.4s;
 }
 
 
 #navcontact {
-	background-color:#f5f05e;
+	background-color:#b3ffc2;
 	margin-left:11%;
 	margin-right:11%;
 	transition:all ease 0.4s;
@@ -262,11 +266,11 @@ nav i {
 }
 
 #filters:hover input ~ .checkmark {
-	border-color:#fd4747;
+	border-color:#ff5076;
 }
 
 #filters:hover .option {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 .option {
@@ -307,17 +311,17 @@ nav i {
 }
 
 .checkmark:hover {
-    background-color: #fd4747;
+    background-color: #ff5076;
 	color:white;
 }
 
 #filters:hover input:checked ~ .checkmark {
-    background-color: #fd4747;
+    background-color: #ff5076;
 	color:white;
 }
 
 .option input:checked ~ .checkmark {
-    background-color: #f5f05e;
+    background-color: #b3ffc2;
 	color:white;
 }
 
@@ -349,11 +353,11 @@ nav i {
 }
 
 #navabout .navcap {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 #navcontact .navcap {
-	color:#e2dc35;
+	color:#42C25C;
 	margin-left:-.8vw;
 }
 
@@ -511,19 +515,19 @@ header {
 }
 
 #navabout:hover .navcap {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 #navabout:focus .navcap {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 #navcontact:hover .navcap {
-	color:#e2dc35;
+	color:#42C25C;
 }
 
 #navcontact:focus .navcap {
-	color:#e2dc35;
+	color:#42C25C;
 }
 
 #navresume:hover .navcap {
@@ -548,26 +552,26 @@ header {
 
 .checkmark {
 	font-size:1vw;
-	border-top:solid #f5f05e 1px;
-	border-bottom:solid #f5f05e 1px;
+	border-top:solid #b3ffc2 1px;
+	border-bottom:solid #b3ffc2 1px;
     padding:0.5% 1% 0.5% 1%;
 }
 
 .option {
-	color:#f5f05e;
+	color:#b3ffc2;
 }
 
 .option input:checked ~ .checkmark {
-    background-color: #f5f05e;
+    background-color: #b3ffc2;
 	color:white;
 }
 
 #filter1 {
-	border-left:solid #f5f05e 1px;
+	border-left:solid #b3ffc2 1px;
 }
 
 #filter3 {
-	border-right:solid #f5f05e 1px;
+	border-right:solid #b3ffc2 1px;
 }
 
 
@@ -689,19 +693,19 @@ header {
 }
 
 #navabout:hover .navcap {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 #navabout:focus .navcap {
-	color:#fd4747;
+	color:#ff5076;
 }
 
 #navcontact:hover .navcap {
-	color:#e2dc35;
+	color:#42C25C;
 }
 
 #navcontact:focus .navcap {
-	color:#e2dc35;
+	color:#42C25C;
 }
 
 #navresume:hover .navcap {
@@ -714,8 +718,8 @@ header {
 
 #nombre {
 	font-size:5vw;
-	line-height:4vw;
-	margin-top:0px;
+	line-height:1vw;
+	margin-top:3vw;
 }
 
 #filters {
@@ -727,26 +731,26 @@ header {
 
 .checkmark {
 	font-size:1vw;
-	border-top:solid #f5f05e 1px;
-	border-bottom:solid #f5f05e 1px;
+	border-top:solid #b3ffc2 1px;
+	border-bottom:solid #b3ffc2 1px;
     padding:0.5% 1% 0.5% 1%;
 }
 
 .option {
-	color:#f5f05e;
+	color:#b3ffc2;
 }
 
 .option input:checked ~ .checkmark {
-    background-color: #f5f05e;
+    background-color: #b3ffc2;
 	color:white;
 }
 
 #filter1 {
-	border-left:solid #f5f05e 1px;
+	border-left:solid #b3ffc2 1px;
 }
 
 #filter3 {
-	border-right:solid #f5f05e 1px;
+	border-right:solid #b3ffc2 1px;
 }
 
 .gallery {
@@ -1055,7 +1059,7 @@ video {
 }
 
 .desc a:hover {
-	color:#f5f05e;
+	color:#b3ffc2;
 }
 
 .desc a:visited {
@@ -1064,7 +1068,7 @@ video {
 
 
 #upbutt {
-    background-color: #fd4747;
+    background-color: #ff5076;
 	width:4vw;
 	padding-bottom:4vw;
     position: fixed;
