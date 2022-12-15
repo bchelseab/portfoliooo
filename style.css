@@ -299,6 +299,18 @@ figure {
 	#row-two {
 		flex-direction: column-reverse;
 	}
+	header {
+	width: 72vw;
+	}
+	.logo {
+	width: 64vw;
+	}
+	.header-bottom {
+	width: 64vw;
+	}
+	#description{
+	width: 35vw;
+	}
 	.large-block {
 		width: auto;
 	}
@@ -348,8 +360,35 @@ figure {
 	.flex-half {
 		width: 100%;
 	}
+	.large-caption h2 {
+		font-size: 120px;
+	}
+	.project-title {
+		font-size: 120px;
+	}
+	.large-caption p {
+		font-size: 50px;
+	}
+	.small-caption h2 {
+		font-size: 50px;
+	}
 	h1 {
-		color: gold;
+		font-size: 64px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	p {
+		font-size: 32px;
+	}
+	.cta {
+		font-size: 32px;
+	}
+	.large-text {
+		font-size: 42px;
 	}
 }
 @media only screen and (max-width: 780px) and 
@@ -371,7 +410,6 @@ figure {
 	}
 	h1 {
 		font-size: 18px;
-		color:red;
 	}
 	h2 {
 		font-size: 13px;
