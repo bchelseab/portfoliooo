@@ -290,7 +290,8 @@ figure {
 	width: 48%;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 980px) and (min-width: 781px) and 
+(-webkit-min-device-pixel-ratio: 2) {
 	#row-one {
 		flex-direction: column;
 		margin-left: 0px;
@@ -308,15 +309,6 @@ figure {
 		width:83vw;
 		padding-top:50vw;
 	}
-	.large-caption h2 {
-		font-size: 40px;
-	}
-	.project-title {
-		font-size: 40px;
-	}
-	.large-caption p {
-		font-size: 20px;
-	}
 	.large-caption:hover {
 		height:23.3vw;
 	}
@@ -331,14 +323,48 @@ figure {
 		width: 40vw;
 		padding-top: 25vw;
 	}
+	
+	.thumbnail-small {
+		width: 42vw;
+	}
+	.header-bottom {
+		padding-top:7vw;
+	}
+	.flexbox {
+		flex-direction: column;
+		margin-bottom: 3vw;
+	}
+	.project-stats {
+		width: 100%;
+		margin-bottom: 8vw;
+	}
+	.project-desc {
+		width: 100%;
+	}
+	.project-pic {
+		width: 100%;
+		margin-bottom: 2vw;
+	}
+	.flex-half {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 780px) and 
+(-webkit-max-device-pixel-ratio: 2) {
+	.large-caption h2 {
+		font-size: 40px;
+	}
+	.project-title {
+		font-size: 40px;
+	}
+	.large-caption p {
+		font-size: 20px;
+	}
 	.small-caption h2 {
 		font-size: 20px;
 	}
 	.small-caption p {
 		font-size: 14px;
-	}
-	.thumbnail-small {
-		width: 42vw;
 	}
 	h1 {
 		font-size: 18px;
@@ -358,6 +384,41 @@ figure {
 	.large-text {
 		font-size: 18px;
 		margin-bottom: 8vw;
+	}
+	#row-one {
+		flex-direction: column;
+		margin-left: 0px;
+	}
+	#row-two {
+		flex-direction: column-reverse;
+	}
+	.large-block {
+		width: auto;
+	}
+	.thumbnail-large {
+		width: auto;
+	}
+	.large-caption {
+		width:83vw;
+		padding-top:50vw;
+	}
+	.large-caption:hover {
+		height:23.3vw;
+	}
+	.small-block {
+		width: auto;
+		height: auto;
+	}
+	.small-caption:hover {
+		height:16vw
+	}
+	.small-caption {
+		width: 40vw;
+		padding-top: 25vw;
+	}
+	
+	.thumbnail-small {
+		width: 42vw;
 	}
 	.header-bottom {
 		padding-top:7vw;
