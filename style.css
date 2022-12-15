@@ -348,6 +348,9 @@ figure {
 	.flex-half {
 		width: 100%;
 	}
+	h1 {
+		color: gold;
+	}
 }
 @media only screen and (max-width: 780px) and 
 (-webkit-max-device-pixel-ratio: 2) {
@@ -368,6 +371,7 @@ figure {
 	}
 	h1 {
 		font-size: 18px;
+		color:red;
 	}
 	h2 {
 		font-size: 13px;
