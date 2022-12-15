@@ -84,25 +84,13 @@ header a:visited{
 	transition: all ease .5s;
 }
 .logo h1:hover {
-	color:#8D8D8D;
+	color:#9E9E9E;
 }
-.description a {
-	transition: all ease .5s;
-	text-decoration: none;
-	color: inherit;
-}
-.description a:visited{
-	text-decoration: none;
-	color: inherit;
-}
-.description a:hover {
-	color:#8D8D8D;
-}
-.back-arrow {
+#description a {
 	transition: all ease .5s;
 }
-.description:hover .back-arrow {
-	fill: #8D8D8D;
+#description a:hover {
+	color:#9E9E9E;
 }
 @keyframes line-in {
   from {margin-left: -10vw; opacity: 0;}
@@ -134,7 +122,7 @@ header a:visited{
 	animation-timing-function: linear;
 	opacity: 0;
 }
-.description{
+#description{
 	width: 19vw;
 	min-width: 207px;
 }
@@ -320,7 +308,7 @@ figure {
 	.header-bottom {
 	width: 64vw;
 	}
-	.description{
+	#description{
 	width: 35vw;
 	}
 	.large-block {
