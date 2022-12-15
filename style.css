@@ -331,7 +331,7 @@ figure {
 	}
 	.large-caption {
 		width:83vw;
-		padding-top:50vw;
+		padding-top:40vw;
 	}
 	.large-caption:hover {
 		height:23.3vw;
@@ -345,7 +345,7 @@ figure {
 	}
 	.small-caption {
 		width: 40vw;
-		padding-top: 25vw;
+		padding-top: 20vw;
 	}
 	
 	.thumbnail-small {
