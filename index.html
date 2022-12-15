@@ -3,118 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <title>Chelsea Borg</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,700,700i|Chivo:300" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-
+<link href="webfonts/font.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-	<div class="box">
-    	
-        <header id="header">
-        <div class="banner">
-            	<div class="name">
-            	<div id="nombre" >Chelsea <br />Borg<span id="topdot">.</span><span id="middot">.</span><span id="botdot">.</span></div>
-                    
-                </div>
-            </div>
-            <div class="turnoff" id="about">
-            	<div id="yolo">Chelsea Borg is a web designer, Boston native, and graduate of Massachusetts College of Art and Design. Though trained in graphic design, she has an equal curiosity for front-end development and makes a hobby out of writing JavaScript functions. This experimentation has resulted in creations such as an Instagram simulator game, and a choose-your-own-adventure about the end of the world, real practical stuff. This entire portfolio site, along with all of its JS functions, was lovingly handcoded by Chelsea. <br /><br />Between design work and coding projects, Chelsea finds time to take ballet classes, cook extravagant meals for one, and hate the Yankees.
-                </div> 
-            </div>
-            
-            <div class="turnoff" id="contact">
-            	<button type="button" class="contactbutt" id="contmail" onClick="addsubj()"><i class="far fa-envelope-open"></i><h4>Email</h4></button><button type="button" class="contactbutt" id="conttel" onClick="addnumb()"><i class="fa fa-phone" aria-hidden="true"></i><h4>Phone</h4></button><a href="https://www.instagram.com/bchelseab/" target="_blank"><button type="button" class="contactbutt" id="contsta"><i class="fab fa-instagram"></i><h4>Instagram</h4></button></a>
-</div>
-            <nav id="nav">
-            	<button type="button" class="navbutt" id="navabout" onClick="switchup(about,contact)"><i class="far fa-user"></i><br /><span class="navcap">About</span></button>
-                <button type="button" class="navbutt" id="navcontact" onClick="switchup(contact,about)"><i class="far fa-paper-plane"></i><br /><span class="navcap">Contact</span></button>
-                <button type="button" class="navbutt" id="navresume" onClick="switchout()"><i class="far fa-file-alt"></i><br /><span class="navcap">Resume</span></button>
-            </nav>
-            <div id="filters">
-                <label class="option">
-                    <input type="radio" checked="checked" name="radio" onClick="kids.forEach(revive)">
-                    <span class="checkmark" id="filter1">All</span>
-                </label>
-  				
-                <label class="option">
-                    <input type="radio" name="radio">
-                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumba')">Design</span>
-                </label>
-                
-                <label class="option">
-                    <input type="radio" name="radio">
-                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbb')">Illustration</span>
-                </label>
-                
-                <label class="option">
-                    <input type="radio" name="radio">
-                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbc')">Web</span>
-                </label>
-                
-                <label class="option">
-                    <input type="radio" name="radio">
-                    <span class="checkmark" onClick="kids.forEach(tryit, 'thumbd')">Advertising</span>
-                </label>
-                
-                <label class="option">
-                    <input type="radio" name="radio">
-                    <span class="checkmark" id="filter3" onClick="kids.forEach(tryit, 'thumbe')">Photography</span>
-                </label>
-            </div>
-        </header>
-        
-        <div class="gallery">
-        	
-        	
-            	  <div id="dieciocho" class="thumba" onClick="kids.forEach(dive, 'dieciocho')"><div class="thumbcap"><h1>Frank Ocean Box Set</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 19.png" /></div>
-			<div id="veintiuno" class="thumba" onClick="kids.forEach(dive, 'veintiuno')"><div class="thumbcap"><h1>Greentown Labs</h1><h2>2020</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 22.png" /></div>
-                <div id="diecinueve" class="thumba" onClick="kids.forEach(dive, 'diecinueve')"><div class="thumbcap"><h1>Cooking Beautifullee</h1><h2>2020</h2><h3>DESIGN + WEB</h3></div><img class="nail" src="Layer 20.png" /></div>
-                <div id="veinte" class="thumbc" onClick="kids.forEach(dive, 'veinte')"><div class="thumbcap"><h1>Loop App</h1><h2>2018</h2><h3>WEB</h3></div><img class="nail" src="Layer 21.png" /></div>
-                <div id="veintitres" class="thumba" onClick="kids.forEach(dive, 'veintitres')"><div class="thumbcap"><h1>Hand Lettered Signs</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 24.png" /></div>
-                <div id="diecisiete" class="thumba" onClick="kids.forEach(dive, 'diecisiete')"><div class="thumbcap"><h1>Acton Rebrand</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 18.png" /></div>
-                <div id="veintidos" class="thumba" onClick="kids.forEach(dive, 'veintidos')"><div class="thumbcap"><h1>Electric Baby Magazine</h1><h2>2018</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 23.png" /></div>
-                <div id="once" class="thumba" onClick="kids.forEach(dive, 'once')"><div class="thumbcap"><h1>The Daily Catch Rebrand</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 12.png" /></div>
-                <div id="diez" class="thumba" onClick="kids.forEach(dive, 'diez')"><div class="thumbcap"><h1>Design is a Job</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 10.png" /></div>
-                <div id="trece" class="thumbd" onClick="kids.forEach(dive, 'trece')"><div class="thumbcap"><h1>Ticonderoga Campaign</h1><h2>2017</h2><h3>ADVERTISING</h3></div><img class="nail" src="Layer 14.png" /></div>
-                <div id="uno" class="thumba" onClick="kids.forEach(dive, 'uno')"><div class="thumbcap"><h1>When Life Gives You Lemons</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 1.png" /></div>
-                <div id="nueve" class="thumbc" onClick="kids.forEach(dive, 'nueve')"><div class="thumbcap"><h1>DaVinci Redesign</h1><h2>2017</h2><h3>WEB</h3></div><img class="nail" src="Layer 9.png" /></div>
-                <div id="quince" class="thumbb" onClick="kids.forEach(dive, 'quince')"><div class="thumbcap"><h1>Self Control</h1><h2>2017</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 16.png" /></div>
-                <div id="seis" class="thumbc" onClick="kids.forEach(dive, 'seis')"><div class="thumbcap"><h1>Instafame Simulator</h1><h2>2017</h2><h3>WEB</h3></div><img class="nail" src="Layer 7.png" /></div>
-                <div id="catorce" class="thumbd" onClick="kids.forEach(dive, 'catorce')"><div class="thumbcap"><h1>BARCC Campaign</h1><h2>2017</h2><h3>ADVERTISING</h3></div><img class="nail" src="Layer 15.png" /></div>
-                <div id="ocho" class="thumba" onClick="kids.forEach(dive, 'ocho')"><div class="thumbcap"><h1>Hood Rebrand</h1><h2>2017</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 11.png" /></div>
-                <div id="cinco" class="thumbe" onClick="kids.forEach(dive, 'cinco')"><div class="thumbcap"><h1>Monochrome</h1><h2>2016</h2><h3>PHOTOGRAPHY</h3></div><img class="nail" src="Layer 8.png" /></div>
-                <div id="tres" class="thumbb" onClick="kids.forEach(dive, 'tres')"><div class="thumbcap"><h1>Daily Sketches</h1><h2>2016</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 4.png" /></div>
-                <div id="cuatro" class="thumbe" onClick="kids.forEach(dive, 'cuatro')"><div class="thumbcap"><h1>Digital Photography</h1><h2>2016</h2><h3>PHOTOGRAPHY</h3></div><img class="nail" src="Layer 3.png" /></div>
-              <div id="doce" class="thumbb" onClick="kids.forEach(dive, 'doce')"><div class="thumbcap"><h1>Inconvenience Animation</h1><h2>2016</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 13.png" /></div>
-                <div id="siete" class="thumba" onClick="kids.forEach(dive, 'siete')"><div class="thumbcap"><h1>UIUC Design Competition</h1><h2>2016</h2><h3>DESIGN</h3></div><img class="nail" src="Layer 6.png" /></div>
-                <div id="dos" class="thumbb" onClick="kids.forEach(dive, 'dos')"><div class="thumbcap"><h1>Dinner</h1><h2>2014</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 2.png" /></div>
-                <div id="dieciseis" class="thumbb" onClick="kids.forEach(dive, 'dieciseis')"><div class="thumbcap"><h1>Chairs</h1><h2>2013</h2><h3>ILLUSTRATION</h3></div><img class="nail" src="Layer 17.png" /></div>
-                
-        	
-        </div>
-    <button type="button" class="navbutt" id="upbutt" onClick="goup()"><i class="fas fa-arrow-up"></i></button>
-    </div>
-    
-   <!-- Default Statcounter code for Chelseaborg.com
-chelseaborg.com -->
-<script type="text/javascript">
-var sc_project=11920268; 
-var sc_invisible=1; 
-var sc_security="8283c3a2"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11920268/0/8283c3a2/1/" alt="web
-statistics"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-<script type="text/javascript" src="script.js"></script>
+	<header>
+		<a href="index.html"><div class="logo" id="top-logo"><h1>Chelsea Borg</h1></div></a>
+		<div class="header-bottom">
+			<div id="description"><h2 class="desc">A Boston-based graphic designer who crafts brand identities, responsive websites, and more for the brands that are saving the world.</h2></div>
+			<nav>
+				<a href="mailto:chelseabelleborg@gmail.com" target="_blank" rel="noreferrer noopener"><div class="nav-icon"><svg width="29px" height="22px" alt="email" viewBox="0 0 29 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<title>Email</title>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g id="email-icon" transform="translate(-622.000000, -256.000000)" fill="#F4F5F8">
+							<g id="Group-5" transform="translate(622.000000, 256.000000)">
+								<path d="M28.4417886,21.9913477 L0.558228865,21.9913477 C0.250530298,21.9913477 0,21.7336392 0,21.4153575 L0,0.577396218 C0,0.25913251 0.250516357,0 0.558228865,0 L28.4417886,0 C28.5901918,0 28.731788,0.0605552214 28.8366198,0.168990058 C28.9400957,0.277424895 29,0.423882945 29,0.577378192 L29,21.4153395 C29,21.5674323 28.9400957,21.7138868 28.8366198,21.8223216 C28.7317846,21.9307564 28.5901884,21.9913477 28.4417886,21.9913477 L28.4417886,21.9913477 Z M1.11659715,20.8379973 L27.8837653,20.8379973 L27.8837653,1.15331434 L1.11659715,1.15331434 L1.11659715,20.8379973 Z" id="Fill-1"></path>
+								<path d="M14.5000087,13.9980729 C14.3638603,13.9980729 14.2317933,13.9473777 14.1296802,13.8530245 L0.187900338,1.00978004 C-0.0421947967,0.798541565 -0.0626160187,0.433789818 0.141610143,0.195815765 C0.347195629,-0.0421799185 0.698479685,-0.0633023238 0.928553907,0.14793615 L14.5001795,12.6476125 L28.0718051,0.14793615 C28.3019002,-0.0633023238 28.6531773,-0.0421763134 28.8587489,0.195815765 C29.062975,0.433811449 29.0425503,0.798555985 28.8124587,1.00978004 L14.8706788,13.8530245 C14.7685657,13.9473777 14.6364987,13.9980729 14.5003503,13.9980729 L14.5000087,13.9980729 Z" id="Fill-2"></path>
+								<path d="M28.4417886,22 C28.3042773,22 28.170851,21.9464856 28.0687414,21.8521323 L28.0605715,21.8450915 L16.7572735,11.4324199 C16.525819,11.2211814 16.5053943,10.8564297 16.7096205,10.6184556 C16.9138467,10.3790539 17.26649,10.3579279 17.4979236,10.5691664 L28.8148148,20.9930139 C28.9863649,21.1535536 29.04491,21.4056201 28.9618588,21.6295341 C28.8801669,21.8520386 28.6732186,22 28.4417607,22 L28.4417886,22 Z" id="Fill-3"></path>
+								<path d="M0.558228865,22 C0.326774407,22 0.119829598,21.8521323 0.0367714443,21.6296459 C-0.0449204147,21.4057354 0.0136259985,21.1536617 0.18517472,20.9931257 L0.193343557,20.9860849 L11.5018708,10.5690871 C11.7333252,10.3578486 12.0859616,10.3789746 12.2901739,10.6183763 C12.4944,10.856372 12.4739753,11.2211165 12.2425209,11.4323406 L0.931206331,21.851862 C0.829093249,21.9462152 0.695666931,21.9997296 0.558158459,21.9997296 L0.558228865,22 Z" id="Fill-4"></path>
+							</g>
+						</g>
+					</g>
+				</svg></div></a>
+				<a href="resume2022.pdf" target="_blank" rel="noreferrer noopener"><div class="nav-icon">
+					<svg width="23px" height="31px" alt="resume" viewBox="0 0 23 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>Resume</title>
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="resume-icon" transform="translate(-677.000000, -254.000000)" fill="#F4F5F8">
+								<path d="M699.835148,259.660059 L695.330446,254.971842 C695.22526,254.862371 695.08216,254.8 694.931733,254.8 L677.562626,254.801274 C677.251962,254.801274 677,255.063494 677,255.386821 L677,284.214453 C677,284.537773 677.251956,284.8 677.562626,284.8 L699.437374,284.8 C699.748038,284.8 700,284.53778 700,284.214453 L700,260.075035 C700,259.919741 699.940068,259.769537 699.834885,259.660079 L699.835148,259.660059 Z M695.495768,256.801117 L698.077697,259.488231 L695.495768,259.488231 L695.495768,256.801117 Z M678.125408,283.62892 L678.125408,255.973749 L694.370453,255.973749 L694.370453,260.075084 C694.370453,260.398404 694.622409,260.660631 694.933079,260.660631 L698.873871,260.660631 L698.873871,283.630192 L678.125408,283.62892 Z M681.452194,261.643143 C681.452194,261.319823 681.70415,261.057596 682.01482,261.057596 L688.499624,261.057596 C688.810288,261.057596 689.06225,261.319816 689.06225,261.643143 C689.06225,261.966462 688.810294,262.228689 688.499624,262.228689 L682.016072,262.228689 C681.704187,262.228689 681.452194,261.966469 681.452194,261.643143 L681.452194,261.643143 Z M695.547117,265.181709 C695.547117,265.505029 695.295162,265.767256 694.984492,265.767256 L682.016135,265.767256 C681.705471,265.767256 681.453509,265.505036 681.453509,265.181709 C681.453509,264.858389 681.705465,264.596163 682.016135,264.596163 L694.983239,264.596163 C695.295124,264.596163 695.547117,264.858383 695.547117,265.181709 L695.547117,265.181709 Z M695.547117,268.720276 C695.547117,269.043596 695.295162,269.305822 694.984492,269.305822 L682.016135,269.307096 C681.705471,269.307096 681.453509,269.044876 681.453509,268.72155 C681.453509,268.398224 681.705465,268.136003 682.016135,268.136003 L694.983239,268.134729 C695.295124,268.134729 695.547117,268.396949 695.547117,268.720276 L695.547117,268.720276 Z"></path>
+							</g>
+						</g>
+					</svg>
+				</div></a>
+			</nav>
+		</div>
+	</header>
+	<div class="primary">
+		<div class="grid">
+			<div class="grid-row" id="row-one">
+				<div class="grid-block large-block" id="block-one">
+					<figure class="thumbnail thumbnail-large" id="thumbnail-sapient">
+						<a href="sapient/index.html">
+						<figcaption class="large-caption"><h2>Sapient</h2><p>Website and video</p></figcaption>
+						<img src="img/sapient-thumbnail.png" class="thumbnail-img" alt="A woman's face in profile with the words Accelerate Human Discovery on top"/></a>
+					</figure>
+				</div>
+				<div class="grid-block small-block" id="block-two">
+					<figure class="thumbnail thumbnail-small" id="thumbnail-str">
+						<a href="str/index.html">
+						<figcaption class="small-caption"><h2>STR</h2><p>Brand and website</p></figcaption>
+						<img src="img/str-thumbnail.png" class="thumbnail-img" alt="Two women looking at a screen, overlaid with abstract data graphics"/></a>
+					</figure>
+					<figure class="filler thumbnail-small" id="thumbnail-blink">
+						<img src="img/twoeyes.gif" class="thumbnail-img" alt="Animated drawing of two blinking eyes"/>
+					</figure>
+					<figure class="thumbnail thumbnail-small" id="thumbnail-doublebull">
+						<a href="doublebull/index.html">
+						<figcaption class="small-caption"><h2>The Double Bull</h2><p>Brand and website</p></figcaption>
+						<img src="img/doublebull-thumbnail.png" class="thumbnail-img" alt="Two beer glasses with the Double Bull logo"/></a>
+					</figure>
+					<figure class="thumbnail thumbnail-small" id="thumbnail-emulate">
+						<a href="emulate/index.html">
+						<figcaption class="small-caption"><h2>Emulate Bio</h2><p>Website</p></figcaption>
+						<img src="img/emulate-thumbnail.png" class="thumbnail-img" alt="Circular graphic filled with organ chips"/></a>
+					</figure>
+				</div>
+			</div>
+			<div class="grid-row" id="row-two">
+				<div class="grid-block small-block" id="block-three">
+					<figure class="thumbnail thumbnail-small" id="thumbnail-selecta">
+						<a href="selecta/index.html">
+						<figcaption class="small-caption"><h2>Selecta Biosciences</h2><p>Website and illustration</p></figcaption>
+						<img src="img/selecta-thumbnail.png" class="thumbnail-img" alt="A partial view of a scientific diagram of a cell"/></a>
+					</figure>
+					<figure class="thumbnail thumbnail-small" id="thumbnail-ginkgo">
+						<a href="ginkgo/index.html">
+						<figcaption class="small-caption"><h2>Ginkgo Bioworks</h2><p>Website</p></figcaption>
+						<img src="img/ginkgo-thumbnail.png" class="thumbnail-img" alt="Biology by design"/></a>
+					</figure>
+					<figure class="filler thumbnail-small" id="thumbnail-blink2">
+						<img src="img/eyeblink.gif" class="thumbnail-img" alt="Animated drawing of a blinking eye"/>
+					</figure>
+					<figure class="thumbnail thumbnail-small" id="thumbnail-renmab">
+						<a href="renmab/index.html">
+						<figcaption class="small-caption"><h2>RenMab</h2><p>Brand, website, and illustration</p></figcaption>
+						<img src="img/renmab-thumbnail.png" class="thumbnail-img" alt="Two floating antibodies"/></a>
+					</figure>
+				</div>
+				<div class="grid-block large-block" id="block-four">
+					<figure class="thumbnail thumbnail-large" id="thumbnail-greentown">
+						<a href="greentown/index.html">
+						<figcaption class="large-caption"><h2>Greentown Labs</h2><p>Brand and website</p></figcaption>
+						<img src="img/greentown-thumbnail.png" class="thumbnail-img" alt="Photo of a building with the sign Greentown Labs"/></a>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 </body>
 </html>
