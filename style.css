@@ -36,6 +36,20 @@ p {
 	font-size: 21px;
 	margin-bottom: 3vw;
 }
+.small-text {
+	font-weight: 300;
+	font-size: 12px;
+	margin-bottom: 3vw;
+	margin-top: 0px;
+}
+.small-text a {
+	color:#FFFFFF;
+	transition: all ease .5s;
+}
+.small-text a:hover {
+	color:#8D8D8D;
+}
+
 .cta {
 	font-family: 'Inter', sans-serif;
 	font-weight: 700;
@@ -301,6 +315,9 @@ figure {
 .flex-half {
 	width: 48%;
 }
+.flex-loose {
+	width:auto;
+}
 
 @media only screen and (max-width: 980px) and (min-width: 781px) and 
 (-webkit-min-device-pixel-ratio: 2) {
@@ -372,6 +389,9 @@ figure {
 	.flex-half {
 		width: 100%;
 	}
+	.flex-loose {
+		width: 100%;
+	}
 	.large-caption h2 {
 		font-size: 100px;
 	}
@@ -401,6 +421,10 @@ figure {
 	}
 	.large-text {
 		font-size: 42px;
+	}
+	.small-text {
+		margin-bottom: 8vw;
+		font-size: 24px;
 	}
 }
 @media only screen and (max-width: 780px) and 
@@ -437,6 +461,9 @@ figure {
 	}
 	.large-text {
 		font-size: 18px;
+		margin-bottom: 8vw;
+	}
+	.small-text {
 		margin-bottom: 8vw;
 	}
 	#row-one {
@@ -493,6 +520,9 @@ figure {
 		margin-bottom: 2vw;
 	}
 	.flex-half {
+		width: 100%;
+	}
+	.flex-loose {
 		width: 100%;
 	}
 }
